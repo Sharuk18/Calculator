@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="main">
+	<input class="input" type="text" name="result"><br>
+	<div class="bt-grp" style="width: 227px;">
+	<button class="button1 num" onclick="update(7)">7</button>
+	<button class="button1 num" onclick="update(8)">8</button>
+	<button class="button1 num" onclick="update(9)">9</button>
+	<button class="button1 sy" onclick="update('*')">*</button>
+	</div>
+	<div class="bt-grp" style="width: 227px;">
+	<button class="button1 num" onclick="update(4)">4</button>
+	<button class="button1 num" onclick="update(5)">5</button>
+	<button class="button1 num" onclick="update(6)">6</button>
+	<button class="button1 sy" onclick="update('-')">-</button>
+	</div>
+	<div class="bt-grp" style="width: 227px;">
+	<button class="button1 num" onclick="update(1)">1</button>
+	<button class="button1 num" onclick="update(2)">2</button>
+	<button class="button1 num" onclick="update(3)">3</button>
+	<button class="button1 sy" onclick="update('+')">+</button>
+	</div>
+	<div class="bt-grp"style="width: 227px;">
+	<button class="button1 num" onclick="update(0)">0</button>
+	<button class="button1 num" onclick="update('.')">.</button>
+	<button class="button1 num" onclick="showresult()">=</button>
+	<button class="button1 sy" onclick="update('/')">/</button>
+	</div>
+	<div class="button2" style="width: 227px;">
+	<button class="button2 clr" onclick="clearinput()">Clear</button>
+</div>
+</div> 
+</body>
+<script>
+	function update(a) {
+		document.getElementsByName('result')[0].value +=a;
+	}
+
+	function showresult() {
+		var res=eval(document.getElementsByName('result')[0].value);
+		document.getElementsByName('result')[0].value=res;
+	}
+
+	function clearinput() {
+		document.getElementsByName('result')[0].value="";
+	}
+</script>
+</html>
